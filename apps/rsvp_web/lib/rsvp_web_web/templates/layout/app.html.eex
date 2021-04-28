@@ -10,6 +10,12 @@
   </head>
   <body>
     <header>
+      <ul class="nav nav-pills col-xs-offset-7">
+        <li><a href="/">Home</a></li>
+        <li><a href="<%= Routes.event_path(@conn, :list) %> ">Events</a></li>
+        <li><a href="<%= Routes.login_path(@conn, :index) %> ">Login</a></li>
+      </ul>
+
       <section class="container">
         <nav role="navigation">
           <ul>
@@ -19,6 +25,11 @@
             <% end %>
           </ul>
         </nav>
+        <%= if @conn.cookies["user_name"] do %>
+          <span>
+            Hello, <%= @conn.cookies["user_name"] %>
+          </span>
+        <% end %>
         <a href="https://phoenixframework.org/" class="phx-logo">
           <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
         </a>

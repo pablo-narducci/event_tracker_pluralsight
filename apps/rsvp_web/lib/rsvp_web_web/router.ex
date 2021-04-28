@@ -21,6 +21,13 @@ defmodule RsvpWebWeb.Router do
     get "/events/new", EventController, :create
     post "/events", EventController, :add
     get "/events/:id", EventController, :show
+    get "/login", LoginController, :index
+    post "/login", LoginController, :login
+
+  end
+
+  scope "/events", RsvpWebWeb do
+    pipe_through :authorized
 
   end
 
