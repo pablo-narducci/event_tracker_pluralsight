@@ -1,0 +1,20 @@
+{
+  "name": "rsvp_web",
+  "homepage": "https://github.com/pablo-narducci/event_tracker_pluralsight",
+  "authors": [
+    "Pablo Narducci <pablonarducci@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
